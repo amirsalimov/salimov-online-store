@@ -1,7 +1,23 @@
 /* eslint-disable react/prop-types */
 
+import { useId, useState } from 'react';
 import './Admin.css';
 export default function Admin({title, setTitle, price, setPrice, handleSubmit}) {
+
+  const handleAdd = (e) => {
+const id =uid ();
+const img = 'https://picsum.photos/id/1/200/300';
+const [title, setTitle] = useState("")
+const [price, setPrice] = useState("")
+
+
+    e.preventDefault ()
+    const newItem ={id:id, img:img, name: title, price:price};
+    setProduct ([...products, newItem]);
+
+  }
+
+
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
